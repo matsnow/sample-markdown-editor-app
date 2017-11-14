@@ -20,6 +20,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test:    /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
         // Sassファイルの読み込みとコンパイル
         test: /\.scss/,
         loaders: [
