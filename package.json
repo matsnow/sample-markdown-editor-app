@@ -4,7 +4,9 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --open --inline --hot",
-    "build": "webpack --target electron-renderer && electron ."
+    "build": "webpack --target electron-renderer && electron .",
+    "prepublish": "webpack --target electron-renderer",
+    "publish": "electron-packager . sample-markdown-editor --platform=darwin --arch=x64 --overwrite --out build"
   },
   "dependencies": {
     "electron": "^1.7.9",

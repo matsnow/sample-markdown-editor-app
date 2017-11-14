@@ -1,3 +1,6 @@
-/node_modules/*
+# library
+/node_modules
 
+# generate
 /public/bundle.js
+/build
