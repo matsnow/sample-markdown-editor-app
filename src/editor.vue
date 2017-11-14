@@ -10,24 +10,18 @@ import * as _ from 'lodash';
 import * as marked from 'marked';
 
 export default {
-  data: () => {
-    return {
-      input: '# hello',
-    }
-  },
+  data: () => ({ input: '# hello' }),
   computed: {
     compiledMarkdown: function () {
-      console.log('called compiledMarkdown : ', this.input);
-      return marked(this.input, { sanitize: true })
+      return marked(this.input, { sanitize: true });
     }
   },
   methods: {
     update: _.debounce(function (e) {
-      console.log("update : ", e.target.value);
       this.input = e.target.value;
     }, 300)
   },
-}
+};
 </script>
 
 <style>

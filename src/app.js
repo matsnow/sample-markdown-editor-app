@@ -5,4 +5,4 @@ new Vue({
   el: '#app',
   template: '<editor/>',
   components: { editor: Editor }
-})
+});
